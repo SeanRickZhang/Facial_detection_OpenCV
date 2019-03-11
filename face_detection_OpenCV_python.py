@@ -14,7 +14,7 @@ class Face_detection(object):
 
         :param image_dir: customed image direction
         :param save_path: facial output direction
-        :param model: "real_time" or a "load_file"
+        :param model: "real_time" or "load_file"
         """
 
         self.image_dir = image_dir
