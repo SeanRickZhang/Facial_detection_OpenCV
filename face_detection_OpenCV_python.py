@@ -36,11 +36,9 @@ class Face_detection(object):
         result = []
         for (x, y, width, height) in faces:
             result.append((x, y, x + width, y + height))
-        # 在原图上框出人脸
         if result:
             num = 1
             for (x1, y1, x2, y2) in result:
-                # cv2.rectangle(img, (x1, y1), (x2, y2), (255, 255, 0), thickness=8)
                 face_region = img[y1:y2, x1:x2]
                 print("save picture " + str(num))
 
@@ -54,11 +52,9 @@ class Face_detection(object):
         while True:
             num+=1
             ret, frame = cap.read()
-            # Our operations on the frame come here
             if not ret:
                 break
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            # Display the resulting frame
             faces_cascade = cv2.CascadeClassifier(self.path)
             faces = faces_cascade.detectMultiScale(gray, self.scaleFactor, self.minNeighbors)
             result = []
@@ -72,7 +68,6 @@ class Face_detection(object):
                 #press 'e' to EXIT
                 break
 
-        # When everything done, release the capture
         cap.release()
         cv2.destroyAllWindows()
 
