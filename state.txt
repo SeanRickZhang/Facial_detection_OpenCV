@@ -1,0 +1,9 @@
+Face Detection Based on OpenCV
+SeanRickZhang
+2019/3/11
+
+Example:
+--save_path E:\camera\video
+--model real_time
+--XML_path C:\Users\...\AppData\Roaming\Python\Python36\site-packages\cv2\data\haarcascade_frontalface_default.xml
+--image_dir C:\Users\...\Desktop\timgH6OF65MW.jpg
